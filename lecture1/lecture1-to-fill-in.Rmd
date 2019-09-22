@@ -1,4 +1,4 @@
----
+ ---
 title: "Lecture 1"
 author: "Marc Kaufmann"
 date: "9/10/2019"
@@ -44,15 +44,21 @@ Everything that you use in R has a name: variables (including datasets), functio
 
 ```{r, exercise1, eval=FALSE}
 3         # -> 3
-7 %% 3    # -> ?
-False     # -> ?
-'pi'      # -> ?
-FALSE     # -> ?
+7 %% 3    # -> 1
+False     # -> Error: object 'False' not found
+'pi'      # -> "pi"
+FALSE     # -> FALSE
 ```
 
-**Exercise:** Look up what 'snake case' is and add your answer here.
+**Exercise:** Look up what  is 'snake case'and add your answer here.
+installed but couldnt found in library, according to internet：it is the practice of writing compound words or phrases in which the elements are separated with one underscore character (_) and no spaces, with each element's initial letter usually lowercased within the compound and the first letter either upper- or lowercase—as in "foo_bar" and "Hello_world" 
 
 **Exercise:** What types of names are allowed in R? Look it up and write your answer here as you understand it. Then provide 3 examples of things that are not valid names in R for different reasons. 
+could use any words,numbers,_and so on
+3 not valid names:
+1 cust name--- shouldnt have space
+2 1cust_name ---shouldnt start with numbers
+3 客户_name ----shouldnt use chinese (or this kind of special words that computer couldnt recognize)
 
 #### Everything is an object
 
@@ -112,6 +118,8 @@ When we *call* it, we put parentheses at the end, and we tell it what to perform
 
 **Exercise:** What happens if you call the function $mean$ without any arguments, i.e. $mean()$?
 
+Error in mean.default() : argument "x" is missing, with no default
+
 #### Functions come in packages
 
 As you may start to realize, lots of functions already exist, such as $mean()$ and $sd()$ and $c()$. There are many more functions that were written by other people and bundled into packages so that you can use them. Many packages come bundled with R from the start (base R), while you can install others on your system via 'install.packages()' and use via 'library()'. We will soon use the 'ggplot()' function. Try using it now:
@@ -142,6 +150,10 @@ For built-in functions, you can also ask for help or bring up the documentation 
 ```
 
 **Exercise:** What do 'class()' and 'str()' do? Use 'help' (or '?'). Don't spend too much time reading the docs. Which description do you find more helpful?
+
+with class it will return to attribut
+with str it will structured
+explaination are same,?will be faster
 
 ### Make Your First Figure
 
